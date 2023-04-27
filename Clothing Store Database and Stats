@@ -1,0 +1,28 @@
+--Create clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, gender TEXT, type TEXT, size TEXT, price INTEGER);
+
+INSERT INTO store VALUES (1, "woman", "shirt", "S", 24);
+INSERT INTO store VALUES (2, "woman", "shirt", "M", 24);
+INSERT INTO store VALUES (3, "woman", "shirt", "L", 24);
+INSERT INTO store VALUES (4, "woman", "dress", "XL", 24);
+INSERT INTO store VALUES (5, "man", "shirt", "S", 27);
+INSERT INTO store VALUES (6, "man", "shirt", "M", 27);
+INSERT INTO store VALUES (7, "man", "jacket", "L", 27);
+INSERT INTO store VALUES (8, "man", "shirt", "XL", 27);
+INSERT INTO store VALUES (9, "boy", "shirt", "S", 18);
+INSERT INTO store VALUES (10, "boy", "shirt", "M", 18);
+INSERT INTO store VALUES (11, "boy", "shirt", "L", 18);
+INSERT INTO store VALUES (12, "boy", "shirt", "XL", 18);
+INSERT INTO store VALUES (13, "girl", "dress", "S", 15);
+INSERT INTO store VALUES (14, "girl", "dress", "M", 15);
+INSERT INTO store VALUES (15, "girl", "shirt", "L", 15);
+INSERT INTO store VALUES (16, "girl", "shirt", "XL", 15);
+
+--display the database ordered by price.
+
+SELECT * FROM  store ORDER BY price desc;
+
+--What items are size Large and cost less than $20?
+
+SELECT * FROM store WHERE price < 20 AND size = 'L';
